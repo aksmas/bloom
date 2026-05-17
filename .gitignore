@@ -1,0 +1,118 @@
+# ---------------------------------------------------------------------
+# Godot 4+ specific ignores
+# ---------------------------------------------------------------------
+
+# Godot's import cache, generated shaders, and other ephemeral data
+.godot/
+.import/
+
+# Auto-generated translations (built from committed CSVs)
+*.translation
+
+# Exported builds
+/build/
+/builds/
+/export/
+/exports/
+/bin/
+/dist/
+
+# Mono / C# build artifacts
+.mono/
+data_*/
+mono_crash.*.json
+
+# Android export template
+/android/
+android/build/
+android/build.gradle
+android/AndroidManifest.xml
+
+# iOS export template
+/ios/
+ios/build/
+
+# HTML5 / Web export
+/web/
+*.wasm.gz
+*.pck.gz
+
+# ---------------------------------------------------------------------
+# Editor and IDE
+# ---------------------------------------------------------------------
+
+# VSCode
+.vscode/
+*.code-workspace
+
+# JetBrains (Rider, IntelliJ)
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Visual Studio (for Godot C# / Mono)
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.csproj.user
+*.pidb
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+*.VC.opendb
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# ---------------------------------------------------------------------
+# OS junk
+# ---------------------------------------------------------------------
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+.fseventsd
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+.directory
+.Trash-*
+
+# ---------------------------------------------------------------------
+# Logs, crash dumps, and temp files
+# ---------------------------------------------------------------------
+
+logs/
+*.log
+*.tmp
+*.bak
+*.swp
+*.swo
+crash.dmp
+
+# ---------------------------------------------------------------------
+# Secrets / local config
+# ---------------------------------------------------------------------
+
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+export_presets.cfg
