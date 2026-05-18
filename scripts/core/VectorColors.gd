@@ -42,6 +42,10 @@ func write(color: CoreConstants.BloomColor, value: int) -> void:
 		_: push_error("VectorColors: invalid color %d" % color)
 
 
+func increment(color: CoreConstants.BloomColor, value: int = 1) -> void:
+	write(color, read(color) + value)
+
+
 func add(o: VectorColors) -> VectorColors:
 	return VectorColors.new(
 		WHITE + o.WHITE,
@@ -69,6 +73,10 @@ func equals(o: VectorColors) -> bool:
 		and PINK == o.PINK \
 		and PURPLE == o.PURPLE \
 		and YELLOW == o.YELLOW
+
+
+func is_positive() -> bool:
+	return WHITE >= 0 and RED >= 0 and PINK >= 0 and PURPLE >= 0 and YELLOW >= 0
 
 
 func _to_string() -> String:

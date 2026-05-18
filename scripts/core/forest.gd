@@ -2,14 +2,16 @@ class_name ForestCore
 
 var FLOWERS: VectorColors
 var WILD_FLOWERS: int
+var BUTTERFLIES: Array[ButterflyCore]
 
 
-func _init_flowers(num: int) -> void:
+func _init() -> void:
+	BUTTERFLIES = []
+
+
+func start(players: int) -> void:
+	var num := players + 3
 	FLOWERS = VectorColors.new(num, num, num, num, num)
-
-
-func _init(players: int) -> void:
-	_init_flowers(players + 3)
 	WILD_FLOWERS = players + 1
 
 
@@ -47,3 +49,7 @@ func take_3_diff(
 func add_flowers(flowers: VectorColors, wild_flowers: int) -> void:
 	WILD_FLOWERS += wild_flowers
 	FLOWERS = FLOWERS.add(flowers)
+
+
+func remove_butterfly(idx: int) -> void:
+	BUTTERFLIES.remove_at(idx)

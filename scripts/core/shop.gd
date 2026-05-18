@@ -15,6 +15,7 @@ func _assert_plants_loaded(num: int) -> void:
 		for plant in plants:
 			if plant.color == color:
 				count += 1
+		@warning_ignore("integer_division")
 		assert(count == num / 5)
 
 
@@ -23,27 +24,26 @@ func _init_plants() -> void:
 	_assert_plants_loaded(CoreConstants.TIER_PLANTS[TIER])
 
 
-func _init_sale() -> void:
-	for i in range(sale_count):
-		sale.append(plants[i])
-
-
-func _init(tier: int, players: int) -> void:
+func _init(tier: int) -> void:
 	TIER = tier
 	_init_plants()
+	plants.shuffle()
+
+
+func start(players: int) -> void:
 	sale_count = players + 1
-	_init_sale()
+	for i in range(sale_count):
+		sale.append(plants[i])
 	sale_pointer = sale_count
 
 
-func purchase(idx: int) -> PlantCore:
-	assert(idx < sale_count)
-	var plant := sale[idx]
+func purchase(idx: int) -> bool:
+	if idx < 0 or idx >= sale_count:
+		return false
 	if sale_pointer < CoreConstants.TIER_PLANTS[TIER]:
 		sale[idx] = plants[sale_pointer]
 		sale_pointer += 1
 	else:
 		sale.remove_at(idx)
 		sale_count -= 1
-	return plant
-	
+	return true
