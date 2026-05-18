@@ -3,16 +3,69 @@
 [ext_resource type="Script" uid="uid://ho77um6e63hx" path="res://scripts/core/manager.gd" id="1_uwrxv"]
 [ext_resource type="Script" uid="uid://bm8l001a7ovju" path="res://scripts/ui/lobby.gd" id="2_yqjtg"]
 
+[sub_resource type="LabelSettings" id="LabelSettings_yqjtg"]
+font_color = Color(0.5647059, 0, 0, 1)
+
 [node name="Manager" type="Node2D" unique_id=1880140772]
 script = ExtResource("1_uwrxv")
 metadata/_custom_type_script = "uid://ho77um6e63hx"
 
-[node name="Lobby" type="Panel" parent="." unique_id=1985084051]
+[node name="Lobby" type="ColorRect" parent="." unique_id=332755039]
 offset_right = 1200.0
 offset_bottom = 800.0
+color = Color(0.9340173, 0.0005948961, 0.91332006, 0.1254902)
 script = ExtResource("2_yqjtg")
+
+[node name="ErrorLabel" type="Label" parent="Lobby" unique_id=2017634547]
+visible = false
+layout_mode = 0
+offset_top = 700.0
+offset_right = 1200.0
+offset_bottom = 800.0
+text = "ERROR MESSAGE"
+label_settings = SubResource("LabelSettings_yqjtg")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Timer" type="Timer" parent="Lobby/ErrorLabel" unique_id=1352757228]
+wait_time = 3.0
+one_shot = true
+
+[node name="StartButton" type="Button" parent="Lobby" unique_id=1267250156]
+layout_mode = 0
+offset_left = 1000.0
+offset_top = 600.0
+offset_right = 1060.0
+offset_bottom = 640.0
+text = "START"
+
+[node name="NewPlayer" type="TextEdit" parent="Lobby" unique_id=2123382106]
+layout_mode = 0
+offset_left = 100.0
+offset_top = 150.0
+offset_right = 600.0
+offset_bottom = 200.0
+placeholder_text = "Player Name..."
+
+[node name="AddButton" type="Button" parent="Lobby/NewPlayer" unique_id=584087070]
+layout_mode = 0
+offset_left = 525.0
+offset_right = 575.0
+offset_bottom = 50.0
+text = "ADD"
+
+[node name="Players" type="Label" parent="Lobby" unique_id=474058642]
+layout_mode = 0
+offset_left = 100.0
+offset_top = 250.0
+offset_right = 600.0
+offset_bottom = 550.0
 
 [node name="Table" type="Panel" parent="." unique_id=1981196393]
 visible = false
 offset_right = 1200.0
 offset_bottom = 800.0
+
+[connection signal="timeout" from="Lobby/ErrorLabel/Timer" to="Lobby/ErrorLabel" method="hide"]
+[connection signal="button_down" from="Lobby/StartButton" to="Lobby" method="start_game"]
+[connection signal="button_down" from="Lobby/NewPlayer/AddButton" to="Lobby" method="add_player"]
