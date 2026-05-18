@@ -6,7 +6,6 @@ var PINK: int
 var PURPLE: int
 var YELLOW: int
 
-
 func _init(
 	white: int = 0,
 	red: int = 0,
@@ -66,6 +65,26 @@ func sub(o: VectorColors) -> VectorColors:
 	)
 
 
+func minima(o: VectorColors) -> VectorColors:
+	return VectorColors.new(
+		min(WHITE, o.WHITE),
+		min(RED, o.RED),
+		min(PINK, o.PINK),
+		min(PURPLE, o.PURPLE),
+		min(YELLOW, o.YELLOW),
+	)
+
+
+func maxima(o: VectorColors) -> VectorColors:
+	return VectorColors.new(
+		max(WHITE, o.WHITE),
+		max(RED, o.RED),
+		max(PINK, o.PINK),
+		max(PURPLE, o.PURPLE),
+		max(YELLOW, o.YELLOW),
+	)
+
+
 func equals(o: VectorColors) -> bool:
 	return o != null \
 		and WHITE == o.WHITE \
@@ -77,6 +96,10 @@ func equals(o: VectorColors) -> bool:
 
 func is_positive() -> bool:
 	return WHITE >= 0 and RED >= 0 and PINK >= 0 and PURPLE >= 0 and YELLOW >= 0
+
+
+func count() -> int:
+	return WHITE + RED + PINK + PURPLE + YELLOW
 
 
 func _to_string() -> String:

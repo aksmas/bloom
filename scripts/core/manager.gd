@@ -1,8 +1,9 @@
-class_name GameManagerCore
+class_name GameManagerCore extends Node2D
 
 var num_players: int
 var _turn_butterfly_visits: Array[int]
 
+var status := CoreConstants.GameState.LOBBY
 var current_player: int = 0
 var shops: Array[ShopCore] = [ShopCore.new(0), ShopCore.new(1), ShopCore.new(2)]
 var forest := ForestCore.new()
@@ -24,6 +25,7 @@ func start() -> bool:
 	forest.start(num_players)
 	for shop in shops:
 		shop.start(num_players)
+	status = CoreConstants.GameState.LIVE
 	return true
 
 
@@ -32,9 +34,9 @@ func _next_player() -> void:
 
 
 func _load_butterfly_visits() -> void:
-	for butterfly in forest.BUTTERFLIES:
-		if butterfly.pre_requisite_met(players[current_player].plants):
-			pass
+	for idx in range(forest.BUTTERFLIES.size()):
+		if forest.BUTTERFLIES[idx].pre_requisite_met(players[current_player].plants):
+			_turn_butterfly_visits.append(idx)
 
 
 func end_turn(butterfly_id: int = -1) -> bool:
@@ -58,8 +60,9 @@ func _take_shop_action(shop_id: int, plant_id: int) -> bool:
 	if not _valid_shop_params(shop_id, plant_id):
 		return false
 	var plant := shops[shop_id].sale[plant_id]
-	if shops[shop_id].purchase(plant_id):
-		players[current_player].plants.add(plant)
+	var transaction := TransactionCore.new(players[current_player], plant, forest)
+	if transaction.valid() and shops[shop_id].purchase(plant_id):
+		transaction.execute()
 		_load_butterfly_visits()
 		return true
 	return false
@@ -96,10 +99,13 @@ func _take_grow_action(plant_id: int) -> bool:
 	if plant_id < 0 or plant_id >= players[current_player].reserves.size():
 		return false
 	var plant := players[current_player].reserves[plant_id]
-	players[current_player].plants.add(plant)
-	players[current_player].reserves.remove_at(plant_id)
-	_load_butterfly_visits()
-	return true
+	var transaction := TransactionCore.new(players[current_player], plant, forest)
+	if not transaction.valid():
+		players[current_player].reserves.remove_at(plant_id)
+		transaction.execute()
+		_load_butterfly_visits()
+		return true
+	return false
 
 
 @warning_ignore("int_as_enum_without_cast")

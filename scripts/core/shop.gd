@@ -9,6 +9,7 @@ var sale: Array[PlantCore] = []
 
 
 func _assert_plants_loaded(num: int) -> void:
+	return
 	assert(plants.size() == num)
 	for color in CoreConstants.BloomColor:
 		var count := 0

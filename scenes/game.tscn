@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://cc0tpfjs20bn8"]
+
+[ext_resource type="Script" uid="uid://ho77um6e63hx" path="res://scripts/core/manager.gd" id="1_uwrxv"]
+[ext_resource type="Script" uid="uid://bm8l001a7ovju" path="res://scripts/ui/lobby.gd" id="2_yqjtg"]
+
+[node name="Manager" type="Node2D" unique_id=1880140772]
+script = ExtResource("1_uwrxv")
+metadata/_custom_type_script = "uid://ho77um6e63hx"
+
+[node name="Lobby" type="Panel" parent="." unique_id=1985084051]
+offset_right = 1200.0
+offset_bottom = 800.0
+script = ExtResource("2_yqjtg")
+
+[node name="Table" type="Panel" parent="." unique_id=1981196393]
+visible = false
+offset_right = 1200.0
+offset_bottom = 800.0

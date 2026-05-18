@@ -1,7 +1,7 @@
 class_name ForestCore
 
 var FLOWERS: VectorColors
-var WILD_FLOWERS: int
+var WILDS: int
 var BUTTERFLIES: Array[ButterflyCore]
 
 
@@ -12,13 +12,13 @@ func _init() -> void:
 func start(players: int) -> void:
 	var num := players + 3
 	FLOWERS = VectorColors.new(num, num, num, num, num)
-	WILD_FLOWERS = players + 1
+	WILDS = players + 1
 
 
 func take_wild() -> bool:
-	if WILD_FLOWERS <= 0:
+	if WILDS <= 0:
 		return false
-	WILD_FLOWERS -= 1
+	WILDS -= 1
 	return true
 
 
@@ -47,7 +47,7 @@ func take_3_diff(
 
 
 func add_flowers(flowers: VectorColors, wild_flowers: int) -> void:
-	WILD_FLOWERS += wild_flowers
+	WILDS += wild_flowers
 	FLOWERS = FLOWERS.add(flowers)
 
 
