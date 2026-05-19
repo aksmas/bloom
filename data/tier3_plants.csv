@@ -1,0 +1,21 @@
+name,color,prestige,description,white_cost,red_cost,pink_cost,purple_cost,yellow_cost
+Dogwood,white,3,The 'petals' are actually leaf-like bracts; the real flowers are the tiny cluster in the center.,0,3,5,3,3
+Hydrangea,white,4,Bloom color shifts from blue to pink based on soil pH — uniquely so among common flowers.,0,0,7,0,0
+Gardenia,white,4,Named for Scottish naturalist Alexander Garden; its intense scent peaks at dusk to attract moths.,0,3,0,6,3
+Magnolia,white,5,Older than bees — magnolias evolved earlier and are pollinated by beetles.,0,0,0,7,3
+St. John's Wort,yellow,3,A traditional folk remedy for melancholy — now studied as a mild antidepressant.,3,3,5,3,0
+Forsythia,yellow,4,One of the first shrubs to bloom in spring — often before its leaves emerge.,0,0,0,7,0
+Witch Hazel,yellow,4,Blooms in late autumn or winter; its bark is the source of the famous astringent.,3,6,3,0,0
+Laburnum,yellow,5,Stunning cascading yellow blooms — but every part of the plant is highly toxic.,7,0,0,3,0
+Camellia,red,3,The leaves of one species — Camellia sinensis — give us tea.,3,0,5,3,3
+Crape Myrtle,red,4,Bark peels away in patches to reveal smooth multi-colored trunks underneath.,0,0,0,0,7
+Bottlebrush,red,4,Australian native whose flowers really do look like the brushes used to clean bottles.,3,0,3,6,0
+Pomegranate,red,5,Symbol of fertility in nearly every ancient culture from the Mediterranean to the Middle East.,3,0,7,0,0
+Camellia,pink,3,The leaves of one species — Camellia sinensis — give us tea.,3,5,0,3,3
+Rhododendron,pink,4,Some Himalayan species grow into trees over 100 feet tall.,0,7,0,0,0
+Magnolia,pink,4,Older than bees — magnolias evolved earlier and are pollinated by beetles.,3,0,0,3,6
+Cherry Blossom,pink,5,Japan officially tracks the 'sakura front' as blooms sweep north across the country each spring.,0,3,0,7,0
+Rose of Sharon,purple,3,Not a rose at all — it's a hibiscus and the national flower of South Korea.,3,5,3,0,3
+Butterfly Bush,purple,4,A single bush can attract dozens of butterfly species in a single afternoon.,0,0,7,0,0
+Lilac,purple,4,Old shrubs can live and bloom for over a century.,3,3,6,0,0
+Wisteria,purple,5,Can live for centuries; some Japanese specimens have trunks over six feet thick.,0,7,0,0,3

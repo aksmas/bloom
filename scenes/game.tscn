@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://bm8l001a7ovju" path="res://scripts/ui/lobby.gd" id="2_yqjtg"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_yqjtg"]
-font_color = Color(0.5647059, 0, 0, 1)
+font_color = Color(0, 0, 0, 1)
 
 [node name="Manager" type="Node2D" unique_id=1880140772]
 script = ExtResource("1_uwrxv")

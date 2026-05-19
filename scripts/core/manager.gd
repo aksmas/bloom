@@ -46,6 +46,7 @@ func end_turn(butterfly_id: int = -1) -> bool:
 		var butterfly := forest.BUTTERFLIES[_turn_butterfly_visits[butterfly_id]]
 		forest.remove_butterfly(_turn_butterfly_visits[butterfly_id])
 		players[current_player].add_butterfly(butterfly)
+	_turn_butterfly_visits.clear()
 	_next_player()
 	return true
 
@@ -87,10 +88,10 @@ func _take_forage_action(
 
 
 func _take_wild_action(shop_id: int, plant_id: int) -> bool:
-	if not (_valid_shop_params(shop_id, plant_id) and forest.WILD_FLOWERS > 0):
+	if not (_valid_shop_params(shop_id, plant_id) and forest.WILDS > 0):
 		return false
 	players[current_player].reserves.append(shops[shop_id].sale[plant_id])
-	forest.WILD_FLOWERS -= 1
+	forest.WILDS -= 1
 	players[current_player].wilds += 1
 	return true
 
@@ -100,7 +101,7 @@ func _take_grow_action(plant_id: int) -> bool:
 		return false
 	var plant := players[current_player].reserves[plant_id]
 	var transaction := TransactionCore.new(players[current_player], plant, forest)
-	if not transaction.valid():
+	if transaction.valid():
 		players[current_player].reserves.remove_at(plant_id)
 		transaction.execute()
 		_load_butterfly_visits()

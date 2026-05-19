@@ -1,0 +1,19 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://chjwdyfv0nqa8"
+
+[deps]
+
+files=["res://data/tier3_plants.color.translation", "res://data/tier3_plants.prestige.translation", "res://data/tier3_plants.description.translation", "res://data/tier3_plants.white.translation", "res://data/tier3_plants.red.translation", "res://data/tier3_plants.pink.translation", "res://data/tier3_plants.purple.translation", "res://data/tier3_plants.yellow.translation"]
+
+source_file="res://data/tier3_plants.csv"
+dest_files=["res://data/tier3_plants.color.translation", "res://data/tier3_plants.prestige.translation", "res://data/tier3_plants.description.translation", "res://data/tier3_plants.white.translation", "res://data/tier3_plants.red.translation", "res://data/tier3_plants.pink.translation", "res://data/tier3_plants.purple.translation", "res://data/tier3_plants.yellow.translation"]
+
+[params]
+
+compress=1
+delimiter=0
+unescape_keys=false
+unescape_translations=true

@@ -26,7 +26,7 @@ func take_2_same(color: CoreConstants.BloomColor) -> bool:
 	var count := FLOWERS.read(color)
 	if count < 4:
 		return false
-	FLOWERS.write(color, count - 2)
+	FLOWERS.increment(color, -2)
 	return true
 
 
@@ -42,12 +42,12 @@ func take_3_diff(
 		if FLOWERS.read(color) <= 0:
 			return false
 	for color in colors:
-		FLOWERS.write(color, FLOWERS.read(color) - 1)
+		FLOWERS.increment(color, -1)
 	return true
 
 
-func add_flowers(flowers: VectorColors, wild_flowers: int) -> void:
-	WILDS += wild_flowers
+func add_flowers(flowers: VectorColors, wilds: int) -> void:
+	WILDS += wilds
 	FLOWERS = FLOWERS.add(flowers)
 
 
