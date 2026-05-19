@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://cwmri588r2ona"]
+
+[ext_resource type="Script" uid="uid://byd6sex6q8vir" path="res://scripts/ui/plant_display.gd" id="1_q4wse"]
+[ext_resource type="PackedScene" uid="uid://c1j85svrpf88r" path="res://scenes/cost_display.tscn" id="2_f56p5"]
+
+[node name="ShopPlant" type="ColorRect" unique_id=1068147668]
+offset_right = 100.0
+offset_bottom = 100.0
+script = ExtResource("1_q4wse")
+
+[node name="PlantCost0" parent="." unique_id=17941167 instance=ExtResource("2_f56p5")]
+layout_mode = 0
+offset_left = 80.0
+offset_right = 100.0
+
+[node name="PlantCost1" parent="." unique_id=1392072466 instance=ExtResource("2_f56p5")]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 25.0
+offset_right = 100.0
+offset_bottom = 45.0
+
+[node name="PlantCost2" parent="." unique_id=1787491396 instance=ExtResource("2_f56p5")]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 50.0
+offset_right = 100.0
+offset_bottom = 70.0
+
+[node name="PlantCost3" parent="." unique_id=471997669 instance=ExtResource("2_f56p5")]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 75.0
+offset_right = 100.0
+offset_bottom = 95.0
+
+[node name="BuyButton" type="Button" parent="." unique_id=1241157248]
+visible = false
+layout_mode = 0
+offset_left = 15.0
+offset_top = 35.0
+offset_right = 65.0
+offset_bottom = 85.0
+text = "BUY"
+
+[connection signal="mouse_entered" from="." to="BuyButton" method="show"]
+[connection signal="mouse_exited" from="." to="BuyButton" method="hide"]
+[connection signal="button_down" from="BuyButton" to="." method="sig_plant_selected"]
+[connection signal="mouse_entered" from="BuyButton" to="BuyButton" method="show"]

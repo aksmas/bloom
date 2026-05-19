@@ -57,7 +57,7 @@ func _valid_shop_params(shop_id: int, plant_id: int) -> bool:
 	return true
 
 
-func _take_shop_action(shop_id: int, plant_id: int) -> bool:
+func take_shop_action(shop_id: int, plant_id: int) -> bool:
 	if not _valid_shop_params(shop_id, plant_id):
 		return false
 	var plant := shops[shop_id].sale[plant_id]
@@ -69,7 +69,7 @@ func _take_shop_action(shop_id: int, plant_id: int) -> bool:
 	return false
 
 
-func _take_forage_action(
+func take_forage_action(
 	color1: CoreConstants.BloomColor, 
 	color2: CoreConstants.BloomColor,
 	color3: CoreConstants.BloomColor
@@ -87,7 +87,7 @@ func _take_forage_action(
 	return false
 
 
-func _take_wild_action(shop_id: int, plant_id: int) -> bool:
+func take_wild_action(shop_id: int, plant_id: int) -> bool:
 	if not (_valid_shop_params(shop_id, plant_id) and forest.WILDS > 0):
 		return false
 	players[current_player].reserves.append(shops[shop_id].sale[plant_id])
@@ -96,7 +96,7 @@ func _take_wild_action(shop_id: int, plant_id: int) -> bool:
 	return true
 
 
-func _take_grow_action(plant_id: int) -> bool:
+func take_grow_action(plant_id: int) -> bool:
 	if plant_id < 0 or plant_id >= players[current_player].reserves.size():
 		return false
 	var plant := players[current_player].reserves[plant_id]
@@ -120,11 +120,11 @@ func take_action(
 ) -> bool:
 	match action:
 		CoreConstants.Action.SHOP:
-			return _take_shop_action(shop_id, plant_id)
+			return take_shop_action(shop_id, plant_id)
 		CoreConstants.Action.FORAGE:
-			return _take_forage_action(color1, color2, color3)
+			return take_forage_action(color1, color2, color3)
 		CoreConstants.Action.WILD:
-			return _take_wild_action(shop_id, plant_id)
+			return take_wild_action(shop_id, plant_id)
 		CoreConstants.Action.GROW:
-			return _take_grow_action(plant_id)
+			return take_grow_action(plant_id)
 	return false

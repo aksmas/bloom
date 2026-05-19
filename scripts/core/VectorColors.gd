@@ -102,6 +102,11 @@ func count() -> int:
 	return WHITE + RED + PINK + PURPLE + YELLOW
 
 
-func _to_string() -> String:
-	return "VectorColors(W=%d, R=%d, P=%d, Pu=%d, Y=%d)" \
-		% [WHITE, RED, PINK, PURPLE, YELLOW]
+func to_array_tuple() -> Array:
+	return [
+		[WHITE, CoreConstants.BloomColor.WHITE],
+		[RED, CoreConstants.BloomColor.RED],
+		[PINK, CoreConstants.BloomColor.PINK],
+		[PURPLE, CoreConstants.BloomColor.PURPLE],
+		[YELLOW, CoreConstants.BloomColor.YELLOW]
+	]

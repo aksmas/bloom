@@ -2,11 +2,9 @@ extends ColorRect
 
 @onready var manager: GameManagerCore = $".."
 
-func _process(_delta: float) -> void:
-	if manager.status == CoreConstants.GameState.LOBBY:
-		visible = true
-	else:
-		visible = false
+
+func _ready() -> void:
+	show()
 
 
 func show_error(message: String) -> void:
@@ -38,3 +36,6 @@ func start_game() -> void:
 	var valid := manager.start()
 	if not valid:
 		show_error("Need atleast 2 Players to Start")
+		return
+	hide()
+	$"../Table".setup()

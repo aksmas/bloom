@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://d0tj348vf27ln"]
+
+[ext_resource type="Script" uid="uid://djg1gkm6a478j" path="res://scripts/ui/shop_display.gd" id="1_lx5au"]
+[ext_resource type="PackedScene" uid="uid://cwmri588r2ona" path="res://scenes/shop_plant.tscn" id="2_1l46r"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_xfvoa"]
+font_size = 30
+
+[node name="ShopLabel" type="Label" unique_id=960153321]
+offset_right = 100.0
+offset_bottom = 100.0
+text = "Shop 0"
+label_settings = SubResource("LabelSettings_xfvoa")
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("1_lx5au")
+
+[node name="BackGround" type="ColorRect" parent="." unique_id=597155418]
+modulate = Color(1, 1, 1, 0.19607843)
+layout_mode = 0
+offset_right = 750.0
+offset_bottom = 100.0
+color = Color(1.92523e-06, 0.37354103, 1.4439226e-07, 1)
+
+[node name="Plant0" parent="." unique_id=1068147668 instance=ExtResource("2_1l46r")]
+layout_mode = 0
+offset_left = 125.0
+offset_right = 225.0
+
+[node name="Plant1" parent="." unique_id=873200695 instance=ExtResource("2_1l46r")]
+layout_mode = 0
+offset_left = 250.0
+offset_right = 350.0
+
+[node name="Plant2" parent="." unique_id=2064241612 instance=ExtResource("2_1l46r")]
+layout_mode = 0
+offset_left = 375.0
+offset_right = 475.0
+
+[node name="Plant3" parent="." unique_id=823929078 instance=ExtResource("2_1l46r")]
+layout_mode = 0
+offset_left = 500.0
+offset_right = 600.0
+
+[node name="Plant4" parent="." unique_id=2014127243 instance=ExtResource("2_1l46r")]
+layout_mode = 0
+offset_left = 625.0
+offset_right = 725.0
+
+[connection signal="plant_selected" from="Plant0" to="." method="sig_plant_selected"]
+[connection signal="plant_selected" from="Plant1" to="." method="sig_plant_selected"]
+[connection signal="plant_selected" from="Plant2" to="." method="sig_plant_selected"]
+[connection signal="plant_selected" from="Plant3" to="." method="sig_plant_selected"]
+[connection signal="plant_selected" from="Plant4" to="." method="sig_plant_selected"]

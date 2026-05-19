@@ -1,18 +1,30 @@
 class_name ForestCore
 
+const _BUTTERFLIES_CSV := "res://data/butterflies.csv"
+
 var FLOWERS: VectorColors
 var WILDS: int
-var BUTTERFLIES: Array[ButterflyCore]
+var ALL_BUTTERFLIES: Array[ButterflyCore] = []
+var BUTTERFLIES: Array[ButterflyCore] = []
 
 
 func _init() -> void:
-	BUTTERFLIES = []
+	var file := FileAccess.open(_BUTTERFLIES_CSV, FileAccess.READ)
+	file.get_csv_line()
+	while not file.eof_reached():
+		var row := file.get_csv_line()
+		var prereq := VectorColors.new(
+			int(row[2]), int(row[3]), int(row[4]), int(row[5]), int(row[6])
+		)
+		ALL_BUTTERFLIES.append(ButterflyCore.new(row[0], prereq, row[1]))
 
 
 func start(players: int) -> void:
 	var num := players + 3
 	FLOWERS = VectorColors.new(num, num, num, num, num)
 	WILDS = players + 1
+	ALL_BUTTERFLIES.shuffle()
+	BUTTERFLIES = ALL_BUTTERFLIES.slice(0, players + 1)
 
 
 func take_wild() -> bool:

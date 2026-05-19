@@ -1,6 +1,7 @@
 class_name ShopCore
 
 var TIER: int
+const _PLANTS_CSV := "res://data/tier%d_plants.csv"
 
 var sale_count: int
 var sale_pointer: int = 0
@@ -8,21 +9,18 @@ var plants: Array[PlantCore] = []
 var sale: Array[PlantCore] = []
 
 
-func _assert_plants_loaded(num: int) -> void:
-	return
-	assert(plants.size() == num)
-	for color in CoreConstants.BloomColor:
-		var count := 0
-		for plant in plants:
-			if plant.color == color:
-				count += 1
-		@warning_ignore("integer_division")
-		assert(count == num / 5)
-
-
 func _init_plants() -> void:
-	# Placeholder for plant initialization logic
-	_assert_plants_loaded(CoreConstants.TIER_PLANTS[TIER])
+	var file := FileAccess.open(_PLANTS_CSV % (TIER+1), FileAccess.READ)
+	file.get_csv_line()
+	while not file.eof_reached():
+		var row := file.get_csv_line()
+		var color: CoreConstants.BloomColor = CoreConstants.BloomColor[row[1].to_upper()]
+		var cost := VectorColors.new(
+			int(row[4]), int(row[5]), int(row[6]), int(row[7]), int(row[8])
+		)
+		plants.append(PlantCore.new(
+			plants.size(), row[0], TIER, color, cost, int(row[2]), row[3]
+		))
 
 
 func _init(tier: int) -> void:
