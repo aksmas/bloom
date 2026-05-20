@@ -1,6 +1,6 @@
 class_name PlantInfo
 
-var id: String
+var id: int
 var name: String
 var description: String
 var color: Constants.BloomColor
@@ -8,7 +8,7 @@ var prestige: int
 var cost: Vector5i
 
 func _init(
-	_id: String, _name: String, _color: Constants.BloomColor,
+	_id: int, _name: String, _color: Constants.BloomColor,
 	_description: String, _prestige: int, _cost: Vector5i
 ) -> void:
 	id = _id
