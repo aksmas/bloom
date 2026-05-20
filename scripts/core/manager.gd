@@ -90,10 +90,12 @@ func take_forage_action(
 func take_wild_action(shop_id: int, plant_id: int) -> bool:
 	if not (_valid_shop_params(shop_id, plant_id) and forest.WILDS > 0):
 		return false
-	players[current_player].reserves.append(shops[shop_id].sale[plant_id])
-	forest.WILDS -= 1
-	players[current_player].wilds += 1
-	return true
+	if shops[shop_id].purchase(plant_id):
+		players[current_player].reserves.append(shops[shop_id].sale[plant_id])
+		forest.WILDS -= 1
+		players[current_player].wilds += 1
+		return true
+	return false
 
 
 func take_grow_action(plant_id: int) -> bool:

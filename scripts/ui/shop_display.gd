@@ -6,14 +6,21 @@ var SHOP: ShopCore
 
 signal plant_selected(shop_id: int, plant_id: int)
 
+
+func _hide_plants() -> void:
+	for plant in plant_displays:
+		plant.hide()
+
+
 func update() -> void:
+	_hide_plants()
 	for i in range(SHOP.sale_count):
 		plant_displays[i].update(SHOP.sale[i])
+		plant_displays[i].show()
 
 
 func setup_display_plants() -> void:
-	for plant in plant_displays:
-		plant.hide()
+	_hide_plants()
 	for i in range(SHOP.sale_count):
 		plant_displays[i].show()
 		plant_displays[i].setup(i)

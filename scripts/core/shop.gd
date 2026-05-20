@@ -27,7 +27,6 @@ func _init(tier: int) -> void:
 	TIER = tier
 	_init_plants()
 	plants.shuffle()
-	plants = plants.slice(0, 5)
 
 
 func start(players: int) -> void:
@@ -40,7 +39,7 @@ func start(players: int) -> void:
 func purchase(idx: int) -> bool:
 	if idx < 0 or idx >= sale_count:
 		return false
-	if sale_pointer < 5:
+	if sale_pointer < CoreConstants.TIER_PLANTS[TIER]:
 		sale[idx] = plants[sale_pointer]
 		sale_pointer += 1
 	else:
