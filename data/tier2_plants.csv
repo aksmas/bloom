@@ -1,31 +1,31 @@
-name,color,prestige,description,white_cost,red_cost,pink_cost,purple_cost,yellow_cost
-Shasta Daisy,white,1,A hybrid created by Luther Burbank in 1901 — named after Mount Shasta in California.,0,2,2,0,3
-Yarrow,white,1,Latin name Achillea honors Achilles — who reputedly used it to staunch wounds in the Trojan War.,0,3,0,3,0
-Phlox,white,2,Greek for 'flame' — after its bright colors.,0,5,0,0,0
-Echinacea,white,2,From Greek 'echinos' (hedgehog) — for its spiny central cone.,0,0,4,1,2
-Salvia,white,3,A member of the mint family; its name shares a root with 'salvation' from its ancient medicinal use.,0,0,0,5,3
-Iceland Poppy,white,3,Native to subpolar regions; can bloom through light snow.,0,0,6,0,0
-Coreopsis,yellow,1,Greek for 'bug-like' — its seeds were thought to look like small insects.,3,2,2,0,0
-Yarrow,yellow,1,Latin name Achillea honors Achilles — who reputedly used it to staunch wounds in the Trojan War.,3,0,0,3,0
-Goldenrod,yellow,2,Often blamed for hay fever — but ragweed blooming at the same time is the real culprit.,0,0,0,5,0
-Daylily,yellow,2,Each bloom lasts a single day — but plants produce dozens of buds in succession.,2,4,1,0,0
-Perennial Helianthus,yellow,3,Same genus as sunflowers; perennial varieties spread by underground runners.,5,0,0,3,0
-Coneflower,yellow,3,A keystone prairie species with deep taproots that survive drought and fire.,0,6,0,0,0
-Yarrow,red,1,Latin name Achillea honors Achilles — who reputedly used it to staunch wounds in the Trojan War.,3,0,2,0,2
-Cardinal Flower,red,1,Bright red tubular flowers evolved specifically for hummingbird pollination.,0,0,0,3,3
-Daylily,red,2,Each bloom lasts a single day — but plants produce dozens of buds in succession.,5,0,0,0,0
-Bee Balm,red,2,Leaves smell like Earl Grey tea and were used as a tea substitute after the Boston Tea Party.,0,0,2,1,4
-Echinacea,red,3,From Greek 'echinos' (hedgehog) — for its spiny central cone.,3,0,0,0,5
-Red Hot Poker,red,3,South African native whose torch-shaped flowers attract sunbirds in their homeland.,6,0,0,0,0
-Yarrow,pink,1,Latin name Achillea honors Achilles — who reputedly used it to staunch wounds in the Trojan War.,3,2,0,0,2
-Astilbe,pink,1,One of the few showy flowers that thrives in deep shade.,0,3,0,3,0
-Phlox,pink,2,Greek for 'flame' — after its bright colors.,0,0,0,0,5
-Daylily,pink,2,Each bloom lasts a single day — but plants produce dozens of buds in succession.,4,2,0,1,0
-Echinacea,pink,3,From Greek 'echinos' (hedgehog) — for its spiny central cone.,0,5,0,3,0
-Peony,pink,3,Some Chinese specimens are over 100 years old and considered family heirlooms.,0,0,0,0,6
-Catmint,purple,1,A milder cousin of catnip — cats may still roll in it happily.,2,3,2,0,0
-Russian Sage,purple,1,Despite the name it's not a sage and not from Russia — it's native to Central Asia.,0,0,3,0,3
-Lavender,purple,2,Romans used it in their baths; the name comes from Latin 'lavare' — meaning 'to wash'.,0,0,5,0,0
-Salvia,purple,2,A member of the mint family; its name shares a root with 'salvation' from its ancient medicinal use.,4,2,0,0,1
-Echinacea,purple,3,From Greek 'echinos' (hedgehog) — for its spiny central cone.,3,5,0,0,0
-Coneflower,purple,3,A keystone prairie species with deep taproots that survive drought and fire.,0,0,0,0,6
+id,name,color,prestige,description,white_cost,red_cost,pink_cost,purple_cost,yellow_cost
+201,Shasta Daisy,white,1,A hybrid created by Luther Burbank in 1901 — named after Mount Shasta in California.,0,2,2,0,3
+202,Yarrow,white,1,Latin name Achillea honors Achilles — who reputedly used it to staunch wounds in the Trojan War.,0,3,0,3,0
+203,Phlox,white,2,Greek for 'flame' — after its bright colors.,0,5,0,0,0
+204,Echinacea,white,2,From Greek 'echinos' (hedgehog) — for its spiny central cone.,0,0,4,1,2
+205,Salvia,white,3,A member of the mint family; its name shares a root with 'salvation' from its ancient medicinal use.,0,0,0,5,3
+206,Iceland Poppy,white,3,Native to subpolar regions; can bloom through light snow.,0,0,6,0,0
+207,Coreopsis,yellow,1,Greek for 'bug-like' — its seeds were thought to look like small insects.,3,2,2,0,0
+208,Yarrow,yellow,1,Latin name Achillea honors Achilles — who reputedly used it to staunch wounds in the Trojan War.,3,0,0,3,0
+209,Goldenrod,yellow,2,Often blamed for hay fever — but ragweed blooming at the same time is the real culprit.,0,0,0,5,0
+210,Daylily,yellow,2,Each bloom lasts a single day — but plants produce dozens of buds in succession.,2,4,1,0,0
+211,Perennial Helianthus,yellow,3,Same genus as sunflowers; perennial varieties spread by underground runners.,5,0,0,3,0
+212,Coneflower,yellow,3,A keystone prairie species with deep taproots that survive drought and fire.,0,6,0,0,0
+213,Yarrow,red,1,Latin name Achillea honors Achilles — who reputedly used it to staunch wounds in the Trojan War.,3,0,2,0,2
+214,Cardinal Flower,red,1,Bright red tubular flowers evolved specifically for hummingbird pollination.,0,0,0,3,3
+215,Daylily,red,2,Each bloom lasts a single day — but plants produce dozens of buds in succession.,5,0,0,0,0
+216,Bee Balm,red,2,Leaves smell like Earl Grey tea and were used as a tea substitute after the Boston Tea Party.,0,0,2,1,4
+217,Echinacea,red,3,From Greek 'echinos' (hedgehog) — for its spiny central cone.,3,0,0,0,5
+218,Red Hot Poker,red,3,South African native whose torch-shaped flowers attract sunbirds in their homeland.,6,0,0,0,0
+219,Yarrow,pink,1,Latin name Achillea honors Achilles — who reputedly used it to staunch wounds in the Trojan War.,3,2,0,0,2
+220,Astilbe,pink,1,One of the few showy flowers that thrives in deep shade.,0,3,0,3,0
+221,Phlox,pink,2,Greek for 'flame' — after its bright colors.,0,0,0,0,5
+222,Daylily,pink,2,Each bloom lasts a single day — but plants produce dozens of buds in succession.,4,2,0,1,0
+223,Echinacea,pink,3,From Greek 'echinos' (hedgehog) — for its spiny central cone.,0,5,0,3,0
+224,Peony,pink,3,Some Chinese specimens are over 100 years old and considered family heirlooms.,0,0,0,0,6
+225,Catmint,purple,1,A milder cousin of catnip — cats may still roll in it happily.,2,3,2,0,0
+226,Russian Sage,purple,1,Despite the name it's not a sage and not from Russia — it's native to Central Asia.,0,0,3,0,3
+227,Lavender,purple,2,Romans used it in their baths; the name comes from Latin 'lavare' — meaning 'to wash'.,0,0,5,0,0
+228,Salvia,purple,2,A member of the mint family; its name shares a root with 'salvation' from its ancient medicinal use.,4,2,0,0,1
+229,Echinacea,purple,3,From Greek 'echinos' (hedgehog) — for its spiny central cone.,3,5,0,0,0
+230,Coneflower,purple,3,A keystone prairie species with deep taproots that survive drought and fire.,0,0,0,0,6
