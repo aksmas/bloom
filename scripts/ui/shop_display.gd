@@ -27,5 +27,6 @@ func setup(shop: ShopCore) -> void:
 	setup_display_plants()
 	update()
 
+
 func sig_plant_selected(plant_id: int) -> void:
 	plant_selected.emit(SHOP.TIER, plant_id)

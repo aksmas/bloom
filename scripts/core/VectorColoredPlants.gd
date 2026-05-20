@@ -38,9 +38,9 @@ func count_vector() -> VectorColors:
 
 func prestige() -> int:
 	var ret := 0
-	for color in CoreConstants.BloomColor:
+	for color in CoreConstants.BloomColor.values():
 		for plant in read(color):
-			ret += plant.prestige()
+			ret += plant.PRESTIGE
 	return ret
 
 

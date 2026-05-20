@@ -4,15 +4,22 @@
 [ext_resource type="Script" uid="uid://bm8l001a7ovju" path="res://scripts/ui/lobby.gd" id="2_yqjtg"]
 [ext_resource type="Script" uid="uid://cvqgh5qr73eir" path="res://scripts/ui/table.gd" id="3_lbhrr"]
 [ext_resource type="PackedScene" uid="uid://d0tj348vf27ln" path="res://scenes/shop.tscn" id="3_lnu2h"]
+[ext_resource type="PackedScene" uid="uid://cvvxafuetrb1i" path="res://scenes/player_display.tscn" id="5_iywne"]
+[ext_resource type="PackedScene" uid="uid://cqnoqhouxut77" path="res://scenes/forest_display.tscn" id="6_p57ef"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_yqjtg"]
 font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_iywne"]
+font_size = 31
+font_color = Color(0, 0.7301718, 0.7505065, 1)
 
 [node name="Manager" type="Node2D" unique_id=1880140772]
 script = ExtResource("1_uwrxv")
 metadata/_custom_type_script = "uid://ho77um6e63hx"
 
 [node name="Lobby" type="ColorRect" parent="." unique_id=332755039]
+visible = false
 offset_right = 1200.0
 offset_bottom = 800.0
 color = Color(0.9340173, 0.0005948961, 0.91332006, 0.1254902)
@@ -83,9 +90,67 @@ layout_mode = 0
 offset_top = 200.0
 offset_bottom = 300.0
 
+[node name="Player0" parent="Table" unique_id=1546971980 instance=ExtResource("5_iywne")]
+layout_mode = 0
+offset_top = 700.0
+offset_bottom = 800.0
+
+[node name="MainPlayerLabel" type="Label" parent="Table/Player0" unique_id=548012]
+layout_mode = 0
+offset_top = -50.0
+offset_right = 132.0
+offset_bottom = -27.0
+text = "Current Turn for:"
+
+[node name="Reserves" parent="Table/Player0" unique_id=1080106101 instance=ExtResource("3_lnu2h")]
+layout_mode = 0
+offset_left = 450.0
+offset_right = 565.0
+text = "Reserve"
+
+[node name="PlayerOrderLabel" type="Label" parent="Table" unique_id=1864691043]
+layout_mode = 0
+offset_left = 800.0
+offset_top = 170.0
+offset_right = 1200.0
+offset_bottom = 220.0
+text = "TURN ORDER"
+label_settings = SubResource("LabelSettings_iywne")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Player1" parent="Table" unique_id=1640414138 instance=ExtResource("5_iywne")]
+layout_mode = 0
+offset_left = 800.0
+offset_top = 250.0
+offset_right = 1200.0
+offset_bottom = 350.0
+
+[node name="Player2" parent="Table" unique_id=160544977 instance=ExtResource("5_iywne")]
+layout_mode = 0
+offset_left = 800.0
+offset_top = 400.0
+offset_right = 1200.0
+offset_bottom = 500.0
+
+[node name="Player3" parent="Table" unique_id=713856093 instance=ExtResource("5_iywne")]
+layout_mode = 0
+offset_left = 800.0
+offset_top = 550.0
+offset_right = 1200.0
+offset_bottom = 650.0
+
+[node name="Forest" parent="Table" unique_id=541964574 instance=ExtResource("6_p57ef")]
+layout_mode = 0
+offset_top = 50.0
+offset_bottom = 150.0
+
 [connection signal="timeout" from="Lobby/ErrorLabel/Timer" to="Lobby/ErrorLabel" method="hide"]
 [connection signal="button_down" from="Lobby/StartButton" to="Lobby" method="start_game"]
 [connection signal="button_down" from="Lobby/NewPlayer/AddButton" to="Lobby" method="add_player"]
-[connection signal="plant_selected" from="Table/Shop0" to="." method="take_shop_action"]
-[connection signal="plant_selected" from="Table/Shop1" to="." method="take_shop_action"]
-[connection signal="plant_selected" from="Table/Shop2" to="." method="take_shop_action"]
+[connection signal="plant_selected" from="Table/Shop0" to="Table" method="plant_selected_action"]
+[connection signal="plant_selected" from="Table/Shop1" to="Table" method="plant_selected_action"]
+[connection signal="plant_selected" from="Table/Shop2" to="Table" method="plant_selected_action"]
+[connection signal="plant_selected" from="Table/Player0/Reserves" to="." method="take_grow_action"]
+[connection signal="take_flowers" from="Table/Forest" to="Table" method="forage_action"]
+[connection signal="take_wild" from="Table/Forest" to="Table" method="reserve_mode"]

@@ -8,7 +8,7 @@ const FontColors = [Color.BLACK, Color.WHITE, Color.BLACK, Color.WHITE, Color.BL
 
 const TIER_PLANTS = [40, 30, 20]
 
-const TIER_COLORS = [Color.GREEN, Color.GOLD, Color.BLUE]
+const TIER_COLORS = [Color.GREEN, Color.GOLD, Color.BLUE, Color.CHARTREUSE]
 
 enum Action {SHOP, FORAGE, WILD, GROW}
 

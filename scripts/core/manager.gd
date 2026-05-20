@@ -74,7 +74,7 @@ func take_forage_action(
 	color2: CoreConstants.BloomColor,
 	color3: CoreConstants.BloomColor
 ) -> bool:
-	if (color1 != -1 and color2 == -1 and color3 == -1):
+	if (color1 != -1 and color2 == color1 and color3 == -1):
 		if forest.take_2_same(color1):
 			players[current_player].flowers.increment(color1, 2)
 			return true

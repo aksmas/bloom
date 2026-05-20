@@ -3,6 +3,10 @@
 [ext_resource type="Script" uid="uid://byd6sex6q8vir" path="res://scripts/ui/plant_display.gd" id="1_q4wse"]
 [ext_resource type="PackedScene" uid="uid://c1j85svrpf88r" path="res://scenes/cost_display.tscn" id="2_f56p5"]
 
+[sub_resource type="LabelSettings" id="LabelSettings_f56p5"]
+font_size = 29
+font_color = Color(0, 0, 0, 1)
+
 [node name="ShopPlant" type="ColorRect" unique_id=1068147668]
 offset_right = 100.0
 offset_bottom = 100.0
@@ -38,10 +42,18 @@ offset_bottom = 95.0
 visible = false
 layout_mode = 0
 offset_left = 15.0
-offset_top = 35.0
+offset_top = 50.0
 offset_right = 65.0
-offset_bottom = 85.0
-text = "BUY"
+offset_bottom = 81.0
+text = "TAKE"
+
+[node name="PrestigeLabel" type="Label" parent="." unique_id=2019237063]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+text = "1"
+label_settings = SubResource("LabelSettings_f56p5")
+horizontal_alignment = 1
 
 [connection signal="mouse_entered" from="." to="BuyButton" method="show"]
 [connection signal="mouse_exited" from="." to="BuyButton" method="hide"]
