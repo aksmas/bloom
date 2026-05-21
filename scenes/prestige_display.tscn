@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://desidrb1kqql2"]
+
+[ext_resource type="Texture2D" uid="uid://dfqbfqcjdfvpq" path="res://assets/icons/crown_a.svg" id="1_a8yxv"]
+[ext_resource type="Script" uid="uid://dqiwjami5ukoo" path="res://scripts/elements/prestige_display.gd" id="1_t4ft6"]
+[ext_resource type="Texture2D" uid="uid://b4bid8tm5oidk" path="res://assets/ui/minimap_icon_star_white.svg" id="3_tr5og"]
+
+[node name="PrestigeDisplay" type="Sprite2D" unique_id=1612613285]
+modulate = Color(1, 0.84313726, 0, 1)
+texture = ExtResource("1_a8yxv")
+script = ExtResource("1_t4ft6")
+
+[node name="Star1" type="Sprite2D" parent="." unique_id=725748421]
+position = Vector2(-32, -20)
+texture = ExtResource("3_tr5og")
+
+[node name="Star2" type="Sprite2D" parent="." unique_id=841598585]
+position = Vector2(-16, -28)
+texture = ExtResource("3_tr5og")
+
+[node name="Star3" type="Sprite2D" parent="." unique_id=1002760438]
+position = Vector2(0, -34)
+texture = ExtResource("3_tr5og")
+
+[node name="Star4" type="Sprite2D" parent="." unique_id=1883822824]
+position = Vector2(16, -28)
+texture = ExtResource("3_tr5og")
+
+[node name="Star5" type="Sprite2D" parent="." unique_id=2103366011]
+position = Vector2(32, -20)
+texture = ExtResource("3_tr5og")

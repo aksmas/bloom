@@ -10,6 +10,7 @@ func _load_csv(
 ) -> Array:
 	var data = []
 	var file := FileAccess.open(path, FileAccess.READ)
+	file.get_line()
 	while not file.eof_reached():
 		var line = file.get_line()
 		var values = line.split(",")
@@ -33,11 +34,20 @@ func _load_butterfly(info: Array[String]) -> ButterflyInfo:
 
 
 func _ready():
-	_plants[0] = _load_csv("res://data/plants_tier_1.csv", _load_plant)
-	_plants[1] = _load_csv("res://data/plants_tier_2.csv", _load_plant)
-	_plants[2] = _load_csv("res://data/plants_tier_3.csv", _load_plant)
-	butterflies = _load_csv("res://data/butterflies.csv", _load_butterfly)
+	_plants[0] = _load_csv("res://data/tier1_plants.csv", _load_plant)
+	_plants[1] = _load_csv("res://data/tier2_plants.csv", _load_plant)
+	_plants[2] = _load_csv("res://data/tier3_plants.csv", _load_plant)
+	butterflies.assign(_load_csv("res://data/butterflies.csv", _load_butterfly))
 
 
-func plants(tier: int) -> Array[PlantInfo]:
+func tier_plants(tier: int) -> Array[PlantInfo]:
 	return _plants[tier]
+
+
+func plant(id: int) -> PlantInfo:
+	@warning_ignore("integer_division")
+	return _plants[(id/100)-1][(id%100) -1]
+
+
+func butterfly(id: int) -> ButterflyInfo:
+	return butterflies[id-1]

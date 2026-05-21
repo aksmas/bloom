@@ -15,7 +15,7 @@ config/features=PackedStringArray("4.6", "GL Compatibility")
 
 [autoload]
 
-DataLoader="uid://k2dd4la7hcsr"
+DataLoader="*uid://k2dd4la7hcsr"
 
 [display]
 
