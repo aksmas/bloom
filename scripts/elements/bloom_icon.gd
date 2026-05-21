@@ -20,10 +20,15 @@ var outline_textures: Array[Resource] = [
 ]
 
 
-@export var fill_mode: bool = true
+@export var fill_mode: bool = true:
+	set(value):
+		fill_mode = value
+		_update()
+
+
 @export var color: Constants.BloomColor:
-	set(val):
-		color = val
+	set(value):
+		color = value
 		_update()
 
 

@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://desidrb1kqql2"]
 
-[ext_resource type="Texture2D" uid="uid://dfqbfqcjdfvpq" path="res://assets/icons/crown_a.svg" id="1_a8yxv"]
+[ext_resource type="Texture2D" uid="uid://dfqbfqcjdfvpq" path="res://assets/unused/icons/crown_a.svg" id="1_a8yxv"]
 [ext_resource type="Script" uid="uid://dqiwjami5ukoo" path="res://scripts/elements/prestige_display.gd" id="1_t4ft6"]
-[ext_resource type="Texture2D" uid="uid://b4bid8tm5oidk" path="res://assets/ui/minimap_icon_star_white.svg" id="3_tr5og"]
+[ext_resource type="Texture2D" uid="uid://b4bid8tm5oidk" path="res://assets/icons/minimap_icon_star_white.svg" id="3_tr5og"]
 
 [node name="PrestigeDisplay" type="Sprite2D" unique_id=1612613285]
 modulate = Color(1, 0.84313726, 0, 1)

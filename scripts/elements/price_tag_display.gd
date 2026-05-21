@@ -24,7 +24,6 @@ func _sort_displays() -> void:
 
 func _update() -> void:
 	plant = DataLoader.plant(plant_id)
-	print(plant.cost)
 	for color in Constants.BloomColor.values():
 		displays[color].cost = plant.cost.read(color)
 	_sort_displays()
