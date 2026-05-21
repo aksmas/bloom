@@ -9,7 +9,7 @@ func _load_csv(
 	instantiator: Callable = func(values): return values
 ) -> Array:
 	var data = []
-	var file = FileAccess.open(path, FileAccess.READ)
+	var file := FileAccess.open(path, FileAccess.READ)
 	while not file.eof_reached():
 		var line = file.get_line()
 		var values = line.split(",")
