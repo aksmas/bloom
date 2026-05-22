@@ -1,5 +1,6 @@
-extends Sprite2D
+extends BloomColor
 
+@onready var icon: Sprite2D = $Icon
 
 var fill_textures: Array[Resource] = [
 	preload("res://assets/icons/rhombus.svg"),
@@ -23,21 +24,15 @@ var outline_textures: Array[Resource] = [
 @export var fill_mode: bool = true:
 	set(value):
 		fill_mode = value
-		_update()
-
-
-@export var color: Constants.BloomColor:
-	set(value):
-		color = value
-		_update()
+		_update_texture()
 
 
 func _update_texture() -> void:
-	texture = fill_textures[color] if fill_mode else outline_textures[color]
+	icon.texture = fill_textures[color] if fill_mode else outline_textures[color]
 
 
-func _update() -> void:
-	self_modulate = Constants.BGColors[color]
+func _update_color() -> void:
+	icon.self_modulate = Constants.BGColors[color]
 	_update_texture()
 
 

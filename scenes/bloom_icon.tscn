@@ -1,8 +1,0 @@
-[gd_scene format=3 uid="uid://bx25ceq511se"]
-
-[ext_resource type="Texture2D" uid="uid://goqwyr2i004h" path="res://assets/icons/hexagon.svg" id="1_3xjdt"]
-[ext_resource type="Script" uid="uid://b6h686epaj0id" path="res://scripts/elements/bloom_icon.gd" id="2_3ujev"]
-
-[node name="BloomIcon" type="Sprite2D" unique_id=840538438]
-texture = ExtResource("1_3xjdt")
-script = ExtResource("2_3ujev")

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c3oa36ah24rjr"]
 
-[ext_resource type="PackedScene" uid="uid://cgvolmvqy6vvg" path="res://scenes/bloom_count.tscn" id="1_f8j3d"]
+[ext_resource type="PackedScene" uid="uid://cgvolmvqy6vvg" path="res://scenes/bloom_icon_count.tscn" id="1_f8j3d"]
 [ext_resource type="Script" uid="uid://bpft62eikyi6t" path="res://scripts/elements/price_tag_display.gd" id="1_wscsr"]
 
 [node name="PriceTagDisplay" type="Node2D" unique_id=545396361]
