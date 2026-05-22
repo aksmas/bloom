@@ -2,21 +2,21 @@ extends Sprite2D
 
 
 var fill_textures: Array[Resource] = [
-	# preload("res://assets/icons/rhombus.svg"),
-	preload("res://assets/icons/d3.svg"),
-	preload("res://assets/icons/d12.svg"),
+	preload("res://assets/icons/rhombus.svg"),
 	preload("res://assets/icons/d4.svg"),
+	preload("res://assets/icons/d3.svg"),
 	preload("res://assets/icons/hexagon.svg"),
 	preload("res://assets/icons/pentagon.svg"),
+	preload("res://assets/icons/d12.svg"),
 ]
 
 var outline_textures: Array[Resource] = [
-	# preload("res://assets/icons/rhombus_outline.svg"),
-	preload("res://assets/icons/d3_outline.svg"),
-	preload("res://assets/icons/d12_outline.svg"),
+	preload("res://assets/icons/rhombus_outline.svg"),
 	preload("res://assets/icons/d4_outline.svg"),
+	preload("res://assets/icons/d3_outline.svg"),
 	preload("res://assets/icons/hexagon_outline.svg"),
 	preload("res://assets/icons/pentagon_outline.svg"),
+	preload("res://assets/icons/d12_outline.svg"),
 ]
 
 

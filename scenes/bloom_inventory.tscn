@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://co7bpblti5ha8"]
+
+[ext_resource type="Script" uid="uid://b4kxacmjg7ru5" path="res://scripts/elements/bloom_inventory.gd" id="1_qeatd"]
+
+[node name="BloomInventory" type="Node2D" unique_id=975075506]
+script = ExtResource("1_qeatd")

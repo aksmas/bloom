@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://cxnae01a2y1r0"]
+
+[ext_resource type="Script" uid="uid://m2lkyfx2mjpg" path="res://scripts/elements/bloom_color_display.gd" id="1_3vq7l"]
+[ext_resource type="PackedScene" uid="uid://bbk6p3i0rv2de" path="res://scenes/tulip_count.tscn" id="2_xbnwm"]
+[ext_resource type="PackedScene" uid="uid://cgvolmvqy6vvg" path="res://scenes/bloom_count.tscn" id="3_xbnwm"]
+
+[node name="BloomColorDisplay" type="Node2D" unique_id=1978543155]
+script = ExtResource("1_3vq7l")
+
+[node name="BloomCount" parent="." unique_id=1832979720 instance=ExtResource("3_xbnwm")]
+
+[node name="TulipCount" parent="." unique_id=382753208 instance=ExtResource("2_xbnwm")]
+position = Vector2(100, 32)
+scale = Vector2(0.4, 0.4)

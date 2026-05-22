@@ -46,7 +46,7 @@ func tier_plants(tier: int) -> Array[PlantInfo]:
 
 func plant(id: int) -> PlantInfo:
 	@warning_ignore("integer_division")
-	return _plants[(id/100)-1][(id%100) -1]
+	return _plants[(id/100)-1][(id%100)-1]
 
 
 func butterfly(id: int) -> ButterflyInfo:

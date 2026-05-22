@@ -1,30 +1,31 @@
 [gd_scene format=3 uid="uid://c3oa36ah24rjr"]
 
-[ext_resource type="PackedScene" uid="uid://cgvolmvqy6vvg" path="res://scenes/cost_display.tscn" id="1_f8j3d"]
+[ext_resource type="PackedScene" uid="uid://cgvolmvqy6vvg" path="res://scenes/bloom_count.tscn" id="1_f8j3d"]
 [ext_resource type="Script" uid="uid://bpft62eikyi6t" path="res://scripts/elements/price_tag_display.gd" id="1_wscsr"]
 
 [node name="PriceTagDisplay" type="Node2D" unique_id=545396361]
 script = ExtResource("1_wscsr")
+plant_id = 106
 
 [node name="CostDisplay0" parent="." unique_id=1738122496 instance=ExtResource("1_f8j3d")]
 cost = 1
 
 [node name="CostDisplay1" parent="." unique_id=1832979720 instance=ExtResource("1_f8j3d")]
-position = Vector2(0, 64)
+position = Vector2(64, 0)
 cost = 1
 color = 1
 
 [node name="CostDisplay2" parent="." unique_id=1730916092 instance=ExtResource("1_f8j3d")]
-position = Vector2(0, 128)
+position = Vector2(128, 0)
 cost = 1
 color = 2
 
 [node name="CostDisplay3" parent="." unique_id=347598860 instance=ExtResource("1_f8j3d")]
-position = Vector2(0, 192)
+position = Vector2(192, 0)
 cost = 1
 color = 3
 
 [node name="CostDisplay4" parent="." unique_id=1682206063 instance=ExtResource("1_f8j3d")]
-position = Vector2(0, 256)
+position = Vector2(256, 0)
 cost = 1
 color = 4

@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://bbk6p3i0rv2de"]
+
+[ext_resource type="Script" uid="uid://cvgtgurad7kev" path="res://scripts/elements/tulip_count.gd" id="1_iprtk"]
+[ext_resource type="PackedScene" uid="uid://cedlgy84igyxv" path="res://scenes/tulip_row.tscn" id="2_0rgy1"]
+
+[node name="TulipCount" type="Node2D" unique_id=382753208]
+script = ExtResource("1_iprtk")
+
+[node name="TulipRow1" parent="." unique_id=2143968245 instance=ExtResource("2_0rgy1")]
+position = Vector2(0, -25)
+
+[node name="TulipRow2" parent="." unique_id=519625454 instance=ExtResource("2_0rgy1")]
+position = Vector2(0, 25)

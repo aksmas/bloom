@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://dxgt40iov0p6n"]
+
+[ext_resource type="Texture2D" uid="uid://csgame0erkrr8" path="res://assets/unused/icons/resource_wheat.svg" id="1_2tnkj"]
+
+[node name="PlantIcon" type="Sprite2D" unique_id=620563757]
+texture = ExtResource("1_2tnkj")
+region_enabled = true
+region_rect = Rect2(0, 0, 20, 54)

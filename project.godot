@@ -19,8 +19,8 @@ DataLoader="*uid://k2dd4la7hcsr"
 
 [display]
 
-window/size/viewport_width=1200
-window/size/viewport_height=800
+window/size/viewport_width=1600
+window/size/viewport_height=900
 window/stretch/mode="viewport"
 
 [physics]

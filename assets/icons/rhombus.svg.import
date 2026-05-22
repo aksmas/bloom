@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d00bh67w1uvqi"
-path="res://.godot/imported/rhombus.svg-b066d20af9d4d06bf5d728731c8f84dd.ctex"
+path="res://.godot/imported/rhombus.svg-fdde0594d2281fa571739f8dc82a6f0a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/unused/icons/rhombus.svg"
-dest_files=["res://.godot/imported/rhombus.svg-b066d20af9d4d06bf5d728731c8f84dd.ctex"]
+source_file="res://assets/icons/rhombus.svg"
+dest_files=["res://.godot/imported/rhombus.svg-fdde0594d2281fa571739f8dc82a6f0a.ctex"]
 
 [params]
 

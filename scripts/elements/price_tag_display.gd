@@ -18,14 +18,15 @@ func _sort_displays() -> void:
 	var i := 0
 	for display in displays:
 		if display.visible:
-			display.position.y = i * spacing
+			display.position.x = i * spacing
 			i += 1
 
 
 func _update() -> void:
 	plant = DataLoader.plant(plant_id)
 	for color in Constants.BloomColor.values():
-		displays[color].cost = plant.cost.read(color)
+		if color != Constants.BloomColor.WILD:
+			displays[color].cost = plant.cost.read(color)
 	_sort_displays()
 
 

@@ -6,4 +6,3 @@
 [node name="BloomIcon" type="Sprite2D" unique_id=840538438]
 texture = ExtResource("1_3xjdt")
 script = ExtResource("2_3ujev")
-color = 3
