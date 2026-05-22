@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://dxgt40iov0p6n"]
+
+[ext_resource type="Script" uid="uid://cyw2fp5wsmb68" path="res://scripts/elements/plant_color_icon.gd" id="1_4e8ow"]
+[ext_resource type="Texture2D" uid="uid://csgame0erkrr8" path="res://assets/unused/icons/resource_wheat.svg" id="2_n7awn"]
+
+[node name="PlantColorIcon" type="Node2D" unique_id=456904048]
+script = ExtResource("1_4e8ow")
+color = 5
+metadata/_custom_type_script = "uid://cml7v8qr81ebs"
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=620563757]
+texture = ExtResource("2_n7awn")
+region_enabled = true
+region_rect = Rect2(0, 0, 20, 54)

@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://m2lkyfx2mjpg" path="res://scripts/elements/bloom_color_display.gd" id="1_3vq7l"]
 [ext_resource type="PackedScene" uid="uid://bbk6p3i0rv2de" path="res://scenes/tulip_count.tscn" id="2_xbnwm"]
-[ext_resource type="PackedScene" uid="uid://cgvolmvqy6vvg" path="res://scenes/bloom_icon_count.tscn" id="3_xbnwm"]
+[ext_resource type="PackedScene" uid="uid://cgvolmvqy6vvg" path="res://scenes/info/bloom_icon_count.tscn" id="3_xbnwm"]
 
 [node name="BloomColorDisplay" type="Node2D" unique_id=1978543155]
 script = ExtResource("1_3vq7l")

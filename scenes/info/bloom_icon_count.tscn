@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cgvolmvqy6vvg"]
 
 [ext_resource type="Script" uid="uid://bl4kigdp0cxks" path="res://scripts/elements/bloom_icon_count.gd" id="1_l5f84"]
-[ext_resource type="PackedScene" uid="uid://bx25ceq511se" path="res://scenes/bloom_color_icon.tscn" id="2_x4sfe"]
+[ext_resource type="PackedScene" uid="uid://bx25ceq511se" path="res://scenes/info/bloom_color_icon.tscn" id="2_x4sfe"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_foxhd"]
 font_size = 40
