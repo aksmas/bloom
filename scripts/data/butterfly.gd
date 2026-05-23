@@ -1,4 +1,4 @@
-class_name ButterflyInfo
+class_name ButterflyData
 
 var id: int
 var name: String

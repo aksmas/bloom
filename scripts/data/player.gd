@@ -1,7 +1,8 @@
-class_name PlayerInfo
+class_name PlayerData
 
 var id: String
 var name: String
+
 
 func _init(_id: String, _name: String) -> void:
     id = _id

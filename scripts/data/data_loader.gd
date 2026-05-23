@@ -1,7 +1,7 @@
 extends Node
 
 var _plants: Array[Array] = [[], [], []]
-var butterflies: Array[ButterflyInfo] = []
+var butterflies: Array[ButterflyData] = []
 
 
 func _load_csv(
@@ -27,8 +27,8 @@ func _load_plant(info: Array[String]) -> PlantData:
 	)
 
 
-func _load_butterfly(info: Array[String]) -> ButterflyInfo:
-	return ButterflyInfo.new(
+func _load_butterfly(info: Array[String]) -> ButterflyData:
+	return ButterflyData.new(
 		info[0].to_int(), info[1], info[2], 
 		Vector5i.new(info[4].to_int(), info[3].to_int(), info[6].to_int(), info[7].to_int(), info[5].to_int())
 	)
@@ -50,5 +50,5 @@ func plant(id: int) -> PlantData:
 	return _plants[(id/100)-1][(id%100)-1]
 
 
-func butterfly(id: int) -> ButterflyInfo:
+func butterfly(id: int) -> ButterflyData:
 	return butterflies[id-1]

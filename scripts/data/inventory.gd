@@ -4,7 +4,7 @@ var tulips := Vector5i.new()
 var plants := VectorPlants.new()
 var wilds := 0
 var reserves: Array[PlantData] = []
-var butterflies: Array[ButterflyInfo] = []
+var butterflies: Array[ButterflyData] = []
 
 
 func prestige() -> int:
