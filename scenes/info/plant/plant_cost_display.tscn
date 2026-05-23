@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://c3oa36ah24rjr"]
+
+[ext_resource type="Script" uid="uid://bpft62eikyi6t" path="res://scripts/elements/plant_cost_display.gd" id="1_jkbg7"]
+[ext_resource type="PackedScene" uid="uid://cgvolmvqy6vvg" path="res://scenes/info/bloom/bloom_shape_count.tscn" id="2_oht1w"]
+
+[node name="PlantCost" type="Node2D" unique_id=1898632059]
+script = ExtResource("1_jkbg7")
+metadata/_custom_type_script = "uid://7uwslym75mrm"
+
+[node name="CostDisplay0" parent="." unique_id=1738122496 instance=ExtResource("2_oht1w")]
+
+[node name="CostDisplay1" parent="." unique_id=1832979720 instance=ExtResource("2_oht1w")]
+position = Vector2(64, 0)
+color = 1
+
+[node name="CostDisplay2" parent="." unique_id=1730916092 instance=ExtResource("2_oht1w")]
+position = Vector2(128, 0)
+color = 2
+
+[node name="CostDisplay3" parent="." unique_id=347598860 instance=ExtResource("2_oht1w")]
+position = Vector2(192, 0)
+color = 3
+
+[node name="CostDisplay4" parent="." unique_id=1682206063 instance=ExtResource("2_oht1w")]
+position = Vector2(256, 0)
+color = 4

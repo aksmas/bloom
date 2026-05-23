@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://dxgt40iov0p6n"]
+
+[ext_resource type="Script" uid="uid://cyw2fp5wsmb68" path="res://scripts/elements/plant_icon.gd" id="1_drpdq"]
+[ext_resource type="Texture2D" uid="uid://bl1t660b2u3tl" path="res://assets/icons/resource_wheat.svg" id="2_hi0if"]
+
+[node name="PlantIcon" type="Node2D" unique_id=1031354171]
+script = ExtResource("1_drpdq")
+plant_id = 18
+metadata/_custom_type_script = "uid://7uwslym75mrm"
+
+[node name="ToolTipControl" type="Control" parent="." unique_id=1913587073]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -10.0
+offset_top = -27.0
+offset_right = 10.0
+offset_bottom = 27.0
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=620563757]
+texture = ExtResource("2_hi0if")
+region_enabled = true
+region_rect = Rect2(0, 0, 20, 54)
+
+[connection signal="mouse_entered" from="ToolTipControl" to="." method="set_wild" binds= [true]]
+[connection signal="mouse_exited" from="ToolTipControl" to="." method="set_wild" binds= [false]]

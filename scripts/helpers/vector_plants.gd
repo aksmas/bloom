@@ -1,0 +1,30 @@
+class_name VectorPlants
+
+var _plants: Array[Array]
+
+
+func _init() -> void:
+	_plants = [[], [], [], [], []]
+
+
+func add(plant: PlantInfo) -> void:
+	_plants[plant.color].append(plant)
+
+
+func read(color: Constants.BloomColor) -> Array[PlantInfo]:
+	return _plants[color]
+
+
+func vector() -> Vector5i:
+	var result := Vector5i.new()
+	for i in range(5):
+		result.write(i, read(i).size())
+	return result
+
+
+func prestige() -> int:
+	var ret := 0
+	for color in _plants:
+		for plant: PlantInfo in color:
+			ret += plant.prestige
+	return ret

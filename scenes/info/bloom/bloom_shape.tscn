@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://bx25ceq511se"]
+
+[ext_resource type="Script" uid="uid://b6h686epaj0id" path="res://scripts/elements/bloom_shape.gd" id="1_bgg6p"]
+[ext_resource type="Texture2D" uid="uid://goqwyr2i004h" path="res://assets/icons/hexagon.svg" id="2_1f5e8"]
+
+[node name="BloomShape" type="Node2D" unique_id=673351314]
+script = ExtResource("1_bgg6p")
+metadata/_custom_type_script = "uid://cml7v8qr81ebs"
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=840538438]
+texture = ExtResource("2_1f5e8")

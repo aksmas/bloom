@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://cedlgy84igyxv"]
+
+[ext_resource type="PackedScene" uid="uid://beo4ghrlphjnq" path="res://scenes/info/tulips/tulip_icon.tscn" id="1_lxlin"]
+[ext_resource type="Script" uid="uid://c18h5ci5j4cvq" path="res://scripts/elements/tulip_row.gd" id="1_p65se"]
+
+[node name="TulipRow" type="Node2D" unique_id=2143968245]
+script = ExtResource("1_p65se")
+
+[node name="TulipIcon0" parent="." unique_id=1310048593 instance=ExtResource("1_lxlin")]
+position = Vector2(-75, 0)
+
+[node name="TulipIcon1" parent="." unique_id=760761151 instance=ExtResource("1_lxlin")]
+position = Vector2(-25, 0)
+
+[node name="TulipIcon2" parent="." unique_id=1775252322 instance=ExtResource("1_lxlin")]
+position = Vector2(25, 0)
+
+[node name="TulipIcon3" parent="." unique_id=846386143 instance=ExtResource("1_lxlin")]
+position = Vector2(75, 0)
