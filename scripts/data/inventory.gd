@@ -3,7 +3,7 @@ class_name InventoryData
 var tulips := Vector5i.new()
 var plants := VectorPlants.new()
 var wilds := 0
-var reserves: Array[PlantInfo] = []
+var reserves: Array[PlantData] = []
 var butterflies: Array[ButterflyInfo] = []
 
 

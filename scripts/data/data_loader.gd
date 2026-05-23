@@ -19,8 +19,8 @@ func _load_csv(
 	return data
 
 
-func _load_plant(info: Array[String]) -> PlantInfo:
-	return PlantInfo.new(
+func _load_plant(info: Array[String]) -> PlantData:
+	return PlantData.new(
 		info[0].to_int(), info[1], Constants.BloomColor.get(info[2].to_upper()) ,
 		info[4], info[3].to_int(), 
 		Vector5i.new(info[6].to_int(), info[5].to_int(), info[8].to_int(), info[9].to_int(), info[7].to_int())
@@ -41,11 +41,11 @@ func _ready():
 	butterflies.assign(_load_csv("res://data/butterflies.csv", _load_butterfly))
 
 
-func tier_plants(tier: int) -> Array[PlantInfo]:
+func tier_plants(tier: int) -> Array[PlantData]:
 	return _plants[tier]
 
 
-func plant(id: int) -> PlantInfo:
+func plant(id: int) -> PlantData:
 	@warning_ignore("integer_division")
 	return _plants[(id/100)-1][(id%100)-1]
 

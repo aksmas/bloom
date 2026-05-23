@@ -7,11 +7,11 @@ func _init() -> void:
 	_plants = [[], [], [], [], []]
 
 
-func add(plant: PlantInfo) -> void:
+func add(plant: PlantData) -> void:
 	_plants[plant.color].append(plant)
 
 
-func read(color: Constants.BloomColor) -> Array[PlantInfo]:
+func read(color: Constants.BloomColor) -> Array[PlantData]:
 	return _plants[color]
 
 
@@ -25,6 +25,6 @@ func vector() -> Vector5i:
 func prestige() -> int:
 	var ret := 0
 	for color in _plants:
-		for plant: PlantInfo in color:
+		for plant: PlantData in color:
 			ret += plant.prestige
 	return ret

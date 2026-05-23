@@ -1,7 +1,7 @@
 class_name PlantNode
 extends Node2D
 
-var plant: PlantInfo
+var plant: PlantData
 
 @export var plant_id: int:
 	set(value):

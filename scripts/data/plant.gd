@@ -1,4 +1,4 @@
-class_name PlantInfo
+class_name PlantData
 
 var id: int
 var name: String
