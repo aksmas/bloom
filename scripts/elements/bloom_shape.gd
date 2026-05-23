@@ -3,7 +3,7 @@ extends BloomColor
 @onready var icon: Sprite2D = $Icon
 
 
-var fill_textures: Array[Resource] = [
+const fill_textures: Array[Resource] = [
 	preload("res://assets/icons/rhombus.svg"),
 	preload("res://assets/icons/d4.svg"),
 	preload("res://assets/icons/d3.svg"),
@@ -12,7 +12,7 @@ var fill_textures: Array[Resource] = [
 	preload("res://assets/icons/d12.svg"),
 ]
 
-var outline_textures: Array[Resource] = [
+const outline_textures: Array[Resource] = [
 	preload("res://assets/icons/rhombus_outline.svg"),
 	preload("res://assets/icons/d4_outline.svg"),
 	preload("res://assets/icons/d3_outline.svg"),
@@ -22,7 +22,7 @@ var outline_textures: Array[Resource] = [
 ]
 
 
-@export var fill_mode: bool = true:
+@export var fill_mode: bool:
 	set(value):
 		fill_mode = value
 		_update_texture()

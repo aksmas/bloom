@@ -3,8 +3,9 @@
 [ext_resource type="Script" uid="uid://cvgtgurad7kev" path="res://scripts/elements/tulip_count.gd" id="1_iprtk"]
 [ext_resource type="PackedScene" uid="uid://cedlgy84igyxv" path="res://scenes/info/tulips/tulip_row.tscn" id="2_0rgy1"]
 
-[node name="TulipCount" type="Node2D" unique_id=382753208]
+[node name="TulipCount" type="Node2D" unique_id=1829854312]
 script = ExtResource("1_iprtk")
+metadata/_custom_type_script = "uid://dnt1gvqw7pfwi"
 
 [node name="TulipRow1" parent="." unique_id=2143968245 instance=ExtResource("2_0rgy1")]
 position = Vector2(0, -25)

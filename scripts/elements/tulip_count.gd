@@ -1,22 +1,9 @@
-extends Node2D
+extends BloomColorCount
 
 var spacing := 25
-@onready var row1: Node2D = $TulipRow1
-@onready var row2: Node2D = $TulipRow2
 
-
-@export var count: int:
-	set(value):
-		count = value
-		if is_node_ready():
-			_update_count()
-
-
-@export var color: Constants.BloomColor:
-	set(value):
-		color = value
-		if is_node_ready():
-			_update_color()
+@onready var row1: BloomColor = $TulipRow1
+@onready var row2: BloomColor = $TulipRow2
 
 
 func _update_count() -> void:
@@ -32,8 +19,3 @@ func _update_count() -> void:
 func _update_color() -> void:
 	row1.color = color
 	row2.color = color
-
-
-func _ready() -> void:
-	_update_count()
-	_update_color()

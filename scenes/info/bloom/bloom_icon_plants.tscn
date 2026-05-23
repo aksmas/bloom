@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bgahhsj4255fq"]
+
+[ext_resource type="Script" uid="uid://dnm51nr2s4akr" path="res://scripts/elements/bloom_icon_plants.gd" id="1_5j3ol"]
+[ext_resource type="PackedScene" uid="uid://cgvolmvqy6vvg" path="res://scenes/info/bloom/bloom_shape_count.tscn" id="2_wjx1x"]
+[ext_resource type="PackedScene" uid="uid://dkhtvhew465d" path="res://scenes/info/plant/plant_row.tscn" id="3_vm2nm"]
+
+[node name="PlantCount" type="Node2D" unique_id=571888130]
+script = ExtResource("1_5j3ol")
+metadata/_custom_type_script = "uid://bm1lblarcabig"
+
+[node name="BloomShapeCount" parent="." unique_id=273105424 instance=ExtResource("2_wjx1x")]
+fill_mode = true
+
+[node name="PlantRow" parent="." unique_id=293033752 instance=ExtResource("3_vm2nm")]
+position = Vector2(72, 30)

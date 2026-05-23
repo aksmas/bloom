@@ -6,10 +6,10 @@ extends PlantNode
 	set(value):
 		wild = value
 		if is_node_ready():
-			_update_color()
+			_update_plant()
 
 
-func _update_color() -> void:
+func _update_plant() -> void:
 	icon.self_modulate = (Constants.BGColors[Constants.BloomColor.WILD] 
 							if wild else Constants.BGColors[plant.color])
 

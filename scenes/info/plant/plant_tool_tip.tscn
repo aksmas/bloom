@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://c36oq4tngxs1n"]
+
+[ext_resource type="Script" uid="uid://blyy431rgth12" path="res://scripts/elements/plant_tool_tip.gd" id="1_frrb0"]
+
+[node name="PlantToolTip" type="Node2D" unique_id=1964166983]
+script = ExtResource("1_frrb0")
+metadata/_custom_type_script = "uid://7uwslym75mrm"

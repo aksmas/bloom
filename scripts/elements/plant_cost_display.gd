@@ -1,10 +1,10 @@
 extends PlantNode
 
+const spacing := 64
+
 @onready var displays: Array[Node2D] = [
 	$CostDisplay0, $CostDisplay1, $CostDisplay2, $CostDisplay3, $CostDisplay4
-] 
-
-var spacing := 64
+]
 
 
 func _sort_displays() -> void:
@@ -15,7 +15,7 @@ func _sort_displays() -> void:
 			i += 1
 
 
-func _update_count() -> void:
+func _update_plant() -> void:
 	for color in Constants.BloomColor.values():
 		if color != Constants.BloomColor.WILD:
 			displays[color].count = plant.cost.read(color)

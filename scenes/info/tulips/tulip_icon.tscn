@@ -3,8 +3,10 @@
 [ext_resource type="Texture2D" uid="uid://bk7tif6pumai2" path="res://assets/icons/tulip_icon.svg" id="1_kdxvd"]
 [ext_resource type="Script" uid="uid://wengkfqqtqpb" path="res://scripts/elements/tulip_icon.gd" id="2_iro8k"]
 
-[node name="TulipIcon" type="Sprite2D" unique_id=1310048593]
+[node name="TulipIcon" type="Node2D" unique_id=2796516]
+script = ExtResource("2_iro8k")
+metadata/_custom_type_script = "uid://cml7v8qr81ebs"
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=1310048593]
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("1_kdxvd")
-script = ExtResource("2_iro8k")
-color = 5

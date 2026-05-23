@@ -1,5 +1,5 @@
 class_name BloomColor
-extends Node2D
+extends Bloom2D
 
 
 @export var color: Constants.BloomColor:
@@ -15,12 +15,3 @@ func _update_color() -> void:
 
 func _update() -> void:
 	_update_color()
-
-
-func _setup() -> void:
-	pass
-
-
-func _ready() -> void:
-	_setup()
-	_update()

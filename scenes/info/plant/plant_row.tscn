@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://dkhtvhew465d"]
+
+[ext_resource type="Script" uid="uid://cbco81cr5plk4" path="res://scripts/elements/plant_row.gd" id="1_gem1s"]
+
+[node name="PlantRow" type="Node2D" unique_id=293033752]
+script = ExtResource("1_gem1s")
+metadata/_custom_type_script = "uid://bm1lblarcabig"

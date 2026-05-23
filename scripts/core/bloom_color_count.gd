@@ -9,7 +9,7 @@ extends BloomColor
 			_update_count()
 
 
-func _update_count():
+func _update_count() -> void:
 	pass
 
 

@@ -1,25 +1,17 @@
-extends Sprite2D
+extends BloomColor
 
-var textures :Array[Resource] = [
+const textures :Array[Resource] = [
 	preload("res://assets/icons/tulip_icon.svg"),
 	preload("res://assets/icons/tulip_icon_parrot.svg"),
 ]
 
-@export var color: Constants.BloomColor:
-	set(value):
-		color = value
-		if is_node_ready():
-			_update()
+@onready var icon: Sprite2D = $Icon
 
 
-func _update() -> void:
+func _update_color() -> void:
 	if color == Constants.BloomColor.WILD:
-		texture = textures[1]
+		icon.texture = textures[1]
 		modulate = Color.WHITE
 	else:
-		texture = textures[0]
+		icon.texture = textures[0]
 		modulate = Constants.BGColors[color]
-
-
-func _ready() -> void:
-	_update()

@@ -1,5 +1,5 @@
 class_name PlantNode
-extends Node2D
+extends Bloom2D
 
 var plant: PlantData
 
@@ -10,24 +10,10 @@ var plant: PlantData
 			_update()
 
 
-func _update_color() -> void:
-	pass
-
-
-func _update_count() -> void:
+func _update_plant() -> void:
 	pass
 
 
 func _update() -> void:
 	plant = DataLoader.plant(plant_id)
-	_update_color()
-	_update_count()
-
-
-func _setup() -> void:
-	pass
-
-
-func _ready() -> void:
-	_setup()
-	_update()
+	_update_plant()

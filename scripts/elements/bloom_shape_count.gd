@@ -1,9 +1,9 @@
 extends BloomColorCount
 
+const spacing: float = 5.
+
 @onready var label: Label = $CountLabel
 @onready var bg: BloomColor = $BloomShape
-
-var spacing: float = 5.
 
 @export var fill_mode: bool:
 	set(value):

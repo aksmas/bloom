@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://ckob3pxp2g20q"]
+
+[ext_resource type="Script" uid="uid://f6glr8baa3iw" path="res://scripts/elements/prestige_count.gd" id="1_s6fgw"]
+[ext_resource type="Texture2D" uid="uid://b4bid8tm5oidk" path="res://assets/icons/minimap_icon_star_white.svg" id="2_s6fgw"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_y38l5"]
+font_size = 32
+font_color = Color(0, 0, 0, 1)
+
+[node name="PrestigeCount" type="Node2D" unique_id=1454415353]
+script = ExtResource("1_s6fgw")
+count = 4
+metadata/_custom_type_script = "uid://dnt1gvqw7pfwi"
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=245114539]
+modulate = Color(1, 0.84313726, 0, 1)
+position = Vector2(32, 32)
+texture = ExtResource("2_s6fgw")
+
+[node name="CountLabel" type="Label" parent="." unique_id=1547022204]
+offset_left = 1.0
+offset_right = 65.0
+offset_bottom = 64.0
+text = "3"
+label_settings = SubResource("LabelSettings_y38l5")
+horizontal_alignment = 1
+vertical_alignment = 1
