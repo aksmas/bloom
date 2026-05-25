@@ -1,7 +1,61 @@
 [gd_scene format=3 uid="uid://c36oq4tngxs1n"]
 
 [ext_resource type="Script" uid="uid://blyy431rgth12" path="res://scripts/elements/plant_tool_tip.gd" id="1_frrb0"]
+[ext_resource type="Texture2D" uid="uid://nxbv8ulelbna" path="res://assets/panel_brown_dark.svg" id="2_ych2u"]
+[ext_resource type="PackedScene" uid="uid://bx25ceq511se" path="res://scenes/info/bloom/bloom_shape.tscn" id="3_eqv0h"]
+[ext_resource type="PackedScene" uid="uid://ckob3pxp2g20q" path="res://scenes/info/prestige_count.tscn" id="4_sb7op"]
+[ext_resource type="PackedScene" uid="uid://c3oa36ah24rjr" path="res://scenes/info/plant/plant_cost_display.tscn" id="5_sb7op"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_2q0kv"]
+line_spacing = 8.0
+font_size = 21
+outline_size = 4
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_sb7op"]
+line_spacing = 0.0
+font_size = 14
 
 [node name="PlantToolTip" type="Node2D" unique_id=1964166983]
 script = ExtResource("1_frrb0")
 metadata/_custom_type_script = "uid://7uwslym75mrm"
+
+[node name="BackGround" type="Sprite2D" parent="." unique_id=336530660]
+modulate = Color(0.5137255, 0.5137255, 0.5137255, 0.4627451)
+position = Vector2(128, 128)
+texture = ExtResource("2_ych2u")
+
+[node name="BloomShape" parent="." unique_id=673351314 instance=ExtResource("3_eqv0h")]
+position = Vector2(45, 51)
+scale = Vector2(0.7, 0.7)
+fill_mode = true
+
+[node name="PrestigeCount" parent="." unique_id=1454415353 instance=ExtResource("4_sb7op")]
+position = Vector2(180, 25)
+scale = Vector2(0.8, 0.8)
+
+[node name="NameLabel" type="Label" parent="." unique_id=23738497]
+offset_left = 26.0
+offset_top = 26.0
+offset_right = 230.0
+offset_bottom = 104.0
+text = "WHITE
+DANDILIONS"
+label_settings = SubResource("LabelSettings_2q0kv")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DescLabel" type="Label" parent="." unique_id=964512573]
+offset_left = 26.0
+offset_top = 95.0
+offset_right = 230.0
+offset_bottom = 180.0
+text = "This is the Description"
+label_settings = SubResource("LabelSettings_sb7op")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="PlantCost" parent="." unique_id=1898632059 instance=ExtResource("5_sb7op")]
+position = Vector2(76, 191)
+scale = Vector2(0.6, 0.6)

@@ -2,10 +2,10 @@
 
 [ext_resource type="Script" uid="uid://cyw2fp5wsmb68" path="res://scripts/elements/plant_icon.gd" id="1_drpdq"]
 [ext_resource type="Texture2D" uid="uid://bl1t660b2u3tl" path="res://assets/icons/resource_wheat.svg" id="2_hi0if"]
+[ext_resource type="PackedScene" uid="uid://c36oq4tngxs1n" path="res://scenes/info/plant/plant_tool_tip.tscn" id="3_hi0if"]
 
 [node name="PlantIcon" type="Node2D" unique_id=1031354171]
 script = ExtResource("1_drpdq")
-plant_id = 18
 metadata/_custom_type_script = "uid://7uwslym75mrm"
 
 [node name="ToolTipControl" type="Control" parent="." unique_id=1913587073]
@@ -21,5 +21,11 @@ texture = ExtResource("2_hi0if")
 region_enabled = true
 region_rect = Rect2(0, 0, 20, 54)
 
+[node name="PlantToolTip" parent="." unique_id=1964166983 instance=ExtResource("3_hi0if")]
+visible = false
+position = Vector2(0, 40)
+
+[connection signal="mouse_entered" from="ToolTipControl" to="PlantToolTip" method="show"]
 [connection signal="mouse_entered" from="ToolTipControl" to="." method="set_wild" binds= [true]]
+[connection signal="mouse_exited" from="ToolTipControl" to="PlantToolTip" method="hide"]
 [connection signal="mouse_exited" from="ToolTipControl" to="." method="set_wild" binds= [false]]

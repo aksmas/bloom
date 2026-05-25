@@ -25,7 +25,8 @@ const outline_textures: Array[Resource] = [
 @export var fill_mode: bool:
 	set(value):
 		fill_mode = value
-		_update_texture()
+		if is_node_ready():
+			_update_texture()
 
 
 func _update_texture() -> void:
