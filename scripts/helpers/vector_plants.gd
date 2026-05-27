@@ -7,7 +7,8 @@ func _init() -> void:
 	_plants = [[], [], [], [], []]
 
 
-func add(plant: PlantData) -> void:
+func add(plant_id: int) -> void:
+	var plant := DataLoader.plant(plant_id)
 	_plants[plant.color].append(plant)
 
 
